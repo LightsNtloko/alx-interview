@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-
 """
 0-validate_utf8.py
 
@@ -14,8 +12,8 @@ The UTF-8 encoding rules are as follows:
   - A 2-byte character has the form 110xxxxx 10xxxxxx.
   - A 3-byte character has the form 1110xxxx 10xxxxxx 10xxxxxx.
   - A 4-byte character has the form 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx.
-  
-The function uses bitwise operations to check these patterns and 
+
+The function uses bitwise operations to check these patterns and
 ensures that each byte in the sequence adheres to the UTF-8 standard.
 """
 
@@ -25,7 +23,8 @@ def validUTF8(data):
     Determines if a given data set represents a valid UTF-8 encoding.
 
     Parameters:
-    data (list of int): A list of integers where each integer represents one byte of data.
+    data (list of int): A list of integers where each integer represents one
+    byte of data.
 
     Returns:
     bool: True if the data is a valid UTF-8 encoding, False otherwise.
@@ -54,5 +53,3 @@ def validUTF8(data):
         num_bytes -= 1
 
     return num_bytes == 0
-
-
