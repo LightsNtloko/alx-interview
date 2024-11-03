@@ -17,6 +17,7 @@ The function uses bitwise operations to check these patterns and
 ensures that each byte in the sequence adheres to the UTF-8 standard.
 """
 
+
 def validUTF8(data):
     """
     Determines if a given data set represents a valid UTF-8 encoding.
@@ -51,3 +52,4 @@ def validUTF8(data):
         num_bytes -= 1
 
     return num_bytes == 0
+
