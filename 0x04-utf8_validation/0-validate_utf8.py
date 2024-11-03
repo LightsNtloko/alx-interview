@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+
+
 """
 0-validate_utf8.py
 
@@ -52,4 +54,5 @@ def validUTF8(data):
         num_bytes -= 1
 
     return num_bytes == 0
+
 
