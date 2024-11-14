@@ -6,8 +6,7 @@ const API_URL = 'https://swapi-api.hbtn.io/api';
 if (process.argv.length > 2) {
   request(`${API_URL}/films/${process.argv[2]}/`, (err, _, body) => {
     if (error) {
-      console.error('Error:', error);
-      return;
+      console.log(err);
     }
     const characterURL = JSON.parse(body).characters;
     const charactersName = charactersURL.map(
