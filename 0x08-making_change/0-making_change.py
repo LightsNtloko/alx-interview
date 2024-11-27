@@ -3,6 +3,7 @@
 This module is for solving the change problem
 """
 
+
 def makeChange(coins, total):
     """
     Firstly determine the fewest number of coins needed to meet a
