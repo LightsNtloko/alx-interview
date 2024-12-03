@@ -35,4 +35,3 @@ def island_perimeter(grid):
                     perimeter -= 2  # Remove shared edge
 
     return perimeter
-
