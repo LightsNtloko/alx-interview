@@ -26,7 +26,7 @@ Returns:
 
     prime_count = [0] * (n + 1)
     for k in range(1, n + 1):
-        prime_count[i] = prime_count[k - 1] + (1 if is_prime[k] else 0)
+        prime_count[k] = prime_count[k - 1] + (1 if is_prime[k] else 0)
 
     return is_prime, prime_count
 
