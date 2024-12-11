@@ -12,21 +12,21 @@ Args:
     n (int): The upper limit for generating primes.
 
 Returns:
-    list: A list where index i is True if i is prime, else False.
+    list: A list where index k is True if k is prime, else False.
     list: A cumulative count of primes up to each index.
-    
+
 """
     is_prime = [True] * (n + 1)
     is_prime[0] = is_prime[1] = False  # 0 and 1 are not primes
 
-    for i in range(2, int(n**0.5) + 1):
-        if is_prime[i]:
-            for multiple in range(i * i, n + 1, i):
+    for k in range(2, int(n**0.5) + 1):
+        if is_prime[k]:
+            for multiple in range(k * k, n + 1, k):
                 is_prime[multiple] = False
 
     prime_count = [0] * (n + 1)
-    for i in range(1, n + 1):
-        prime_count[i] = prime_count[i - 1] + (1 if is_prime[i] else 0)
+    for k in range(1, n + 1):
+        prime_count[i] = prime_count[k - 1] + (1 if is_prime[k] else 0)
 
     return is_prime, prime_count
 
@@ -37,11 +37,13 @@ Determine the winner of the Prime Game after x rounds.
 
 Args:
     x (int): Number of rounds.
-    nums (list): List of integers representing the end of the number set for each round.
+    nums (list): List of integers representing the end of
+    the number set for each round.
 
 Returns:
-    str: The name of the player with the most wins ("Maria" or "Ben"), or None if it's a tie.
-    
+    str: The name of the player with the most wins ("Maria" or "Ben"),
+    or None if it's a tie.
+
 """
     if not nums or x < 1:
         return None
