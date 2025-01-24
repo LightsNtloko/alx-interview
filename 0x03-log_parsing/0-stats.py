@@ -13,6 +13,7 @@ status_codes = {
     "403": 0, "404": 0, "405": 0, "500": 0
 }
 
+
 def print_metrics():
     """Print the accumulated metrics."""
     print(f"File size: {total_size}")
